@@ -1,4 +1,4 @@
-module.exports = ({ env }) => ({
+export default ({ env }) => ({
   connection: {
     client: "postgres",
     connection: {
@@ -13,5 +13,6 @@ module.exports = ({ env }) => ({
       },
     },
     debug: false,
+    acquireConnectionTimeout: env.int("DATABASE_CONNECTION_TIMEOUT", 60000),
   },
 });
