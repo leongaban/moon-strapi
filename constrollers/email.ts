@@ -22,6 +22,7 @@ export default async ({ env }) => {
   };
 
   // ? EXAMPLE
+  // ? https://docs.strapi.io/dev-docs/plugins/email
   // await strapi.plugins["email"].services.email.sendTemplatedEmail(
   //   {
   //     to: user.email,
