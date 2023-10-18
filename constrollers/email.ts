@@ -1,17 +1,17 @@
 export default async ({ env }) => {
-  await strapi.plugins["email"].services.email.send({
-    to: "valid email address", // ? User's email
-    from: "hello@moonportfolio.xyz", // ? e.g. single sender verification in SendGrid
+  await strapi.plugins['email'].services.email.send({
+    to: 'valid email address', // ? User's email
+    from: 'hello@moonportfolio.xyz', // ? e.g. single sender verification in SendGrid
     // cc: 'valid email address',
     // bcc: 'valid email address',
-    replyTo: "hello@moonportfolio.xyz",
-    subject: "Email subject", // ? dynamically change this
-    text: "Hello world!", // ? dynamically change this
-    html: "Hello world!", // ? dynamically change this
+    replyTo: 'hello@moonportfolio.xyz',
+    subject: 'Email subject', // ? dynamically change this
+    text: 'Hello world!', // ? dynamically change this
+    html: 'Hello world!', // ? dynamically change this
   });
 
   const emailTemplate = {
-    subject: "Welcome <%= user.firstname %>",
+    subject: 'Welcome <%= user.firstname %>',
     text: `You're signed up on MoonPortfolio!
       Your account is now linked with: <%= user.email %>.`,
     html: `<h1>Welcome to MoonPortfolio</h1>
