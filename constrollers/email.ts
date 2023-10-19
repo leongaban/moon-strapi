@@ -10,6 +10,9 @@ export default async ({ env }) => {
     html: 'Hello world!', // ? dynamically change this
   });
 
+  // TODO Vince
+  // TODO - wrap html in a div with class
+  // TODO - create email for register, reset password
   const emailTemplate = {
     subject: 'Welcome <%= user.firstname %>',
     text: `You're signed up on MoonPortfolio!
