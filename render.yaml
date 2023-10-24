@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: strapi
+    name: moon_strapi
     env: node
     plan: starter
     buildCommand: yarn install && yarn build
@@ -14,7 +14,7 @@ services:
         value: production
       - key: DATABASE_URL
         fromDatabase:
-          name: strapi
+          name: moon_portfolio
           property: connectionString
       - key: JWT_SECRET
         generateValue: true
@@ -24,5 +24,5 @@ services:
         generateValue: true
 
 databases:
-  - name: strapi
+  - name: moon_portfolio
     plan: starter
