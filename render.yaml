@@ -9,7 +9,7 @@ services:
     autoDeploy: false
     envVars:
       - key: NODE_VERSION
-        value: ~16.13.0
+        value: ^16.14.0
       - key: NODE_ENV
         value: production
       - key: DATABASE_URL
@@ -19,6 +19,10 @@ services:
       - key: JWT_SECRET
         generateValue: true
       - key: ADMIN_JWT_SECRET
+        generateValue: true
+      - key: API_TOKEN_SALT
+        generateValue: true
+      - key: TRANSFER_TOKEN_SALT
         generateValue: true
       - key: APP_KEYS
         generateValue: true
