@@ -1,5 +1,4 @@
 export default ({ env }) => ({
-  // ...
   email: {
     config: {
       provider: 'sendgrid', // For community providers pass the full package name (e.g. provider: 'strapi-provider-email-mandrill')
@@ -13,5 +12,7 @@ export default ({ env }) => ({
       },
     },
   },
-  // ...
+  'strapi-google-auth': {
+    enabled: true,
+  },
 });
